@@ -1,0 +1,15 @@
+{
+  "cluster_stats": {
+    "n_clusters": 3,
+    "n_noise_points": 2162,
+    "avg_cluster_size": 1298.3333333333333,
+    "cluster_size_distribution": {
+      "1": 3680,
+      "0": 122,
+      "2": 93
+    }
+  },
+  "silhouette_score": 0.09763918817043304,
+  "calinski_harabasz_score": 30.204289392289134,
+  "davies_bouldin_score": 4.036162556673001
+}

@@ -1,0 +1,94 @@
+patient_question,cleaned_text,keywords,distance_to_centroid
+ My idea was rejected my team must think I'm dumb.,idea rejected team must think dumb,"['idea rejected', 'rejected team', 'think dumb', 'team think', 'rejected']",0.57773554
+ I didn't get the promotion I will never progress in my career.,get promotion never progress career,"['promotion progress', 'promotion', 'progress career', 'career', 'progress']",0.34526175
+ I wasn't promoted I'm a failure at my job.,promoted failure job,"['promoted failure', 'failure job', 'promoted', 'failure', 'job']",0.40348452
+ I wasn't selected for the project my ideas must be worthless.,selected project idea must worthless,"['idea worthless', 'project idea', 'selected project', 'idea', 'project']",0.6359693
+ I didn't get the raise my work is not appreciated.,get raise work appreciated,"['raise work', 'raise', 'work', 'work appreciated', 'appreciated']",0.41381687
+ My idea was rejected I'm worthless.,idea rejected worthless,"['idea rejected', 'rejected worthless', 'rejected', 'idea', 'worthless']",0.5321759
+ I don't have a high-paying job I'm not successful.,high paying job successful,"['job successful', 'high paying', 'paying job', 'successful', 'job']",0.45361626
+ I wasn't asked to join the team they must not think I'm good enough.,asked join team must think good enough,"['join team', 'asked join', 'team think', 'join', 'team']",0.5949538
+ My team didn't support my proposal they must think I'm incompetent.,team support proposal must think incompetent,"['support proposal', 'team support', 'think incompetent', 'incompetent', 'proposal think']",0.5164016
+ I was overlooked for the promotion my work is not good enough.,overlooked promotion work good enough,"['overlooked promotion', 'promotion work', 'promotion', 'overlooked', 'work good']",0.5234847
+ My teacher didn't answer my question she must think it was dumb.,teacher answer question must think dumb,"['teacher answer', 'think dumb', 'dumb', 'teacher', 'question think']",0.40669268
+ I wasn't included in the group project they must think I'm incapable.,included group project must think incapable,"['group project', 'think incapable', 'project think', 'included group', 'incapable']",0.612809
+ My proposal was rejected I'm not good at my job.,proposal rejected good job,"['proposal rejected', 'rejected good', 'rejected', 'proposal', 'job']",0.49046898
+ I can't speak another language fluently I'm not intelligent.,speak another language fluently intelligent,"['language fluently', 'fluently intelligent', 'speak language', 'fluently', 'speak']",0.31269974
+ I haven't been promoted yet my work must be mediocre.,promoted yet work must mediocre,"['promoted work', 'work mediocre', 'promoted', 'mediocre', 'work']",0.5193666
+ I wasn't chosen for the project my skills must be lacking.,chosen project skill must lacking,"['project skill', 'skill lacking', 'chosen project', 'skill', 'project']",0.73184705
+ My project didn't receive any funding my ideas must be worthless.,project receive funding idea must worthless,"['funding idea', 'receive funding', 'idea worthless', 'project receive', 'funding']",0.53332597
+ I didn't receive a raise I'm not valued at my job.,receive raise valued job,"['receive raise', 'raise valued', 'raise', 'valued job', 'valued']",0.2844643
+ My proposal was rejected I must not be good enough.,proposal rejected must good enough,"['proposal rejected', 'rejected good', 'proposal', 'rejected', 'good']",0.4705816
+ I didn't receive a promotion I must not be competent at my job.,receive promotion must competent job,"['promotion competent', 'receive promotion', 'promotion', 'competent job', 'competent']",0.51911783
+ My teacher didn't choose me to lead the group they must think I'm incapable.,teacher choose lead group must think incapable,"['lead group', 'choose lead', 'lead', 'teacher choose', 'group think']",0.5525307
+ I wasn't asked to join the study group they must think I'm dumb.,asked join study group must think dumb,"['join study', 'study group', 'asked join', 'study', 'join']",0.5818318
+ I wasn't chosen for the job I must not have the skills.,chosen job must skill,"['job skill', 'chosen job', 'skill', 'chosen', 'job']",0.6231223
+ My idea wasn't accepted for the project I must not be innovative.,idea accepted project must innovative,"['project innovative', 'innovative', 'idea accepted', 'accepted project', 'idea']",0.6719498
+ I don't have a high-paying job I'm not as good as my peers.,high paying job good peer,"['high paying', 'good peer', 'peer', 'paying job', 'job good']",0.48660707
+ I didn't win the science fair my project must have been poor.,win science fair project must poor,"['science fair', 'project poor', 'win science', 'fair project', 'project']",0.5036296
+ I'm not fluent in another language I must not be cultured.,fluent another language must cultured,"['language cultured', 'fluent language', 'fluent', 'cultured', 'language']",0.2717382
+ My suggestion wasn't taken up my ideas must be worthless.,suggestion taken idea must worthless,"['idea worthless', 'suggestion taken', 'suggestion', 'idea', 'taken idea']",0.6256554
+ I can't code as well as my friend I'm not smart.,code well friend smart,"['code friend', 'friend smart', 'code', 'smart', 'friend']",0.4283579
+ My project didn't get approved my work must not be good enough.,project get approved work must good enough,"['project approved', 'approved work', 'project', 'work', 'approved']",0.65158165
+ My proposal wasn't accepted my ideas must not be worth it.,proposal accepted idea must worth,"['proposal accepted', 'proposal', 'accepted idea', 'idea worth', 'idea']",0.51162636
+ My friend didn't ask me for help with their assignment they must think I'm not smart.,friend ask help assignment must think smart,"['assignment think', 'think smart', 'help assignment', 'smart', 'assignment']",0.5647265
+ I wasn't chosen for the promotion I must not be competent.,chosen promotion must competent,"['promotion competent', 'chosen promotion', 'promotion', 'competent', 'chosen']",0.58306164
+ I wasn't asked to participate in the group project they must think I'm unreliable.,asked participate group project must think unreliable,"['participate group', 'asked participate', 'group project', 'participate', 'think unreliable']",0.6055367
+ My proposal was not accepted I must not be persuasive.,proposal accepted must persuasive,"['accepted persuasive', 'proposal', 'proposal accepted', 'persuasive', 'accepted']",0.48345396
+ My classmate didn't ask me to study together they must think I'm dumb.,classmate ask study together must think dumb,"['study think', 'classmate ask', 'ask study', 'study', 'think dumb']",0.5359659
+ I wasn't chosen for the group leader they must not trust me.,chosen group leader must trust,"['leader trust', 'group leader', 'trust', 'chosen group', 'leader']",0.4809013
+ My teacher didn't ask for my opinion they must think I'm dumb.,teacher ask opinion must think dumb,"['teacher ask', 'ask opinion', 'think dumb', 'opinion think', 'opinion']",0.47128505
+ My friend didn't ask me to help with their project they must think I'm incapable.,friend ask help project must think incapable,"['think incapable', 'incapable', 'project think', 'help project', 'project']",0.5710284
+ I don't have a promotion yet I must be incompetent.,promotion yet must incompetent,"['promotion incompetent', 'promotion', 'incompetent']",0.46469313
+ I wasn't asked to join the study group they must think I'm not smart.,asked join study group must think smart,"['join study', 'study group', 'asked join', 'study', 'think smart']",0.61286724
+ I didn't receive a raise I must not be valued at work.,receive raise must valued work,"['receive raise', 'raise valued', 'valued work', 'raise', 'work']",0.39517528
+ My boss didn't give me an important project they must think I'm incapable.,bos give important project must think incapable,"['bos important', 'project think', 'bos', 'think incapable', 'important project']",0.64155567
+ I wasn't invited to the team-building activity they must not think I'm a team player.,invited team building activity must think team player,"['team building', 'team player', 'invited team', 'think team', 'team']",0.5212617
+ My project didn't get funding it must not be a good idea.,project get funding must good idea,"['project funding', 'funding good', 'funding', 'idea', 'project']",0.54964554
+ My classmates didn't ask me to join their study group they must think I'm not smart.,classmate ask join study group must think smart,"['join study', 'study group', 'think smart', 'classmate ask', 'ask join']",0.62607735
+ My project didn't get approved my idea must not be good.,project get approved idea must good,"['project approved', 'approved idea', 'idea good', 'idea', 'project']",0.66304207
+ I don't know how to code I must not be tech-savvy.,know code must tech savvy,"['code tech', 'know code', 'tech savvy', 'code', 'tech']",0.39239484
+ I didn't get a second interview they must not see potential in me.,get second interview must see potential,"['second interview', 'interview potential', 'interview', 'potential', 'second']",0.3805908
+ I wasn't promoted this year they must not appreciate my work.,promoted year must appreciate work,"['promoted year', 'promoted', 'year appreciate', 'year', 'work']",0.4931662
+ My group didn't choose my idea for the project they must think it's bad.,group choose idea project must think bad,"['choose idea', 'idea project', 'project think', 'group choose', 'idea']",0.67687726
+ My boss didn't ask for my help on the project they must think I'm incapable.,bos ask help project must think incapable,"['bos ask', 'bos', 'think incapable', 'project think', 'incapable']",0.57571214
+ I can't build a website like my friend I must not be tech-savvy.,build website like friend must tech savvy,"['build website', 'tech savvy', 'build', 'friend tech', 'website like']",0.33840805
+ I don't have a high-paying job I must not be skilled.,high paying job must skilled,"['job skilled', 'high paying', 'skilled', 'paying job', 'job']",0.4556058
+ I wasn't asked to join the club they must not think I'm cool.,asked join club must think cool,"['join club', 'club think', 'asked join', 'club', 'join']",0.42356735
+ I wasn't chosen to lead the group project they must think I'm not a good leader.,chosen lead group project must think good leader,"['lead group', 'chosen lead', 'lead', 'leader', 'good leader']",0.71175367
+ My professor didn't answer my question they must think it's stupid.,professor answer question must think stupid,"['professor answer', 'professor', 'think stupid', 'stupid', 'question think']",0.44544786
+ My idea wasn't chosen for the company event they must not think it's good.,idea chosen company event must think good,"['company event', 'idea chosen', 'chosen company', 'event think', 'event']",0.6114414
+ My teacher didn't pick me to answer the question they must not think I know the answer.,teacher pick answer question must think know answer,"['teacher pick', 'pick answer', 'teacher', 'question think', 'think know']",0.4995764
+ I didn't get a raise this year my work must not be valued.,get raise year work must valued,"['raise year', 'raise', 'work valued', 'year work', 'valued']",0.33719784
+ I can't speak French like my classmate I must not be good at languages.,speak french like classmate must good language,"['speak french', 'french like', 'french', 'classmate good', 'like classmate']",0.29716766
+ My professor didn't accept my thesis proposal they must think it's a bad idea.,professor accept thesis proposal must think bad idea,"['accept thesis', 'thesis proposal', 'professor accept', 'proposal think', 'proposal']",0.40826267
+ My boss didn't choose me for the project they must think I'm incompetent.,bos choose project must think incompetent,"['think incompetent', 'choose project', 'incompetent', 'bos choose', 'project think']",0.64889383
+ I wasn't offered the job after the interview they must not think I'm qualified.,offered job interview must think qualified,"['interview think', 'think qualified', 'interview', 'job interview', 'qualified']",0.5079541
+ My team didn't choose my design they must think it's bad.,team choose design must think bad,"['choose design', 'team choose', 'design think', 'design', 'think bad']",0.56352377
+ I wasn't offered the promotion they must not recognize my hard work.,offered promotion must recognize hard work,"['promotion recognize', 'offered promotion', 'promotion', 'hard work', 'recognize hard']",0.5678824
+ I don't have as many patents as my inventor friend I must not be innovative.,many patent inventor friend must innovative,"['inventor friend', 'patent inventor', 'friend innovative', 'patent', 'inventor']",0.46068653
+ I wasn't chosen for the special assignment they must not think I'm competent.,chosen special assignment must think competent,"['think competent', 'special assignment', 'assignment think', 'competent', 'assignment']",0.66613644
+ I didn't get selected for the research grant my proposal must not have been good.,get selected research grant proposal must good,"['grant proposal', 'research grant', 'proposal good', 'selected research', 'proposal']",0.44442862
+ I don't have a Tesla I must not be tech-savvy.,tesla must tech savvy,"['tesla tech', 'tesla', 'tech savvy', 'tech', 'savvy']",0.3734568
+ I can't fix computers like my IT friend I must not be technically inclined.,fix computer like friend must technically inclined,"['fix computer', 'computer like', 'computer', 'friend technically', 'fix']",0.29147804
+ I didn't win the science fair my experiment must not have been innovative.,win science fair experiment must innovative,"['experiment innovative', 'experiment', 'science fair', 'fair experiment', 'win science']",0.43100852
+ I don't have as many languages on Duolingo as my polyglot friend I must not have a knack for languages.,many language duolingo polyglot friend must knack language,"['duolingo polyglot', 'language duolingo', 'polyglot friend', 'duolingo', 'knack language']",0.31422532
+ My classmates didn't invite me to the study group they must not think I'm smart.,classmate invite study group must think smart,"['classmate invite', 'invite study', 'study group', 'think smart', 'group think']",0.63435394
+ I can't speak French as well as my Parisian friend I must not be good at languages.,speak french well parisian friend must good language,"['speak french', 'parisian friend', 'french parisian', 'french', 'parisian']",0.2806491
+ I wasn't selected for the company training they must not see potential in me.,selected company training must see potential,"['company training', 'training potential', 'training', 'selected company', 'potential']",0.522169
+ I wasn't promoted at work they must not appreciate my efforts.,promoted work must appreciate effort,"['promoted work', 'promoted', 'work appreciate', 'appreciate effort', 'effort']",0.57413644
+ My boss didn't consult me for the project they must not value my ideas.,bos consult project must value idea,"['bos consult', 'consult project', 'project value', 'value idea', 'consult']",0.6162572
+ I wasn't chosen to lead the company project they must not value my leadership skills.,chosen lead company project must value leadership skill,"['leadership skill', 'value leadership', 'lead company', 'leadership', 'chosen lead']",0.60293585
+ I didn't get the promotion my work must not be appreciated.,get promotion work must appreciated,"['promotion work', 'promotion', 'work', 'work appreciated', 'appreciated']",0.53348875
+ I wasn't chosen for the business development team they must not think I'm ambitious.,chosen business development team must think ambitious,"['business development', 'development team', 'chosen business', 'think ambitious', 'development']",0.60570395
+ I wasn't chosen as the team leader for the project they must not think I'm competent.,chosen team leader project must think competent,"['think competent', 'leader project', 'team leader', 'chosen team', 'competent']",0.7239163
+ My classmates didn't invite me to their study group they must not think I'm smart.,classmate invite study group must think smart,"['classmate invite', 'invite study', 'study group', 'think smart', 'group think']",0.63435394
+ I can't speak Spanish as well as my bilingual friend I must not be good at languages.,speak spanish well bilingual friend must good language,"['bilingual friend', 'speak spanish', 'spanish bilingual', 'bilingual', 'spanish']",0.31221837
+ I wasn't selected for the company's leadership training they must not see me as a leader.,selected company leadership training must see leader,"['training leader', 'leadership training', 'company leadership', 'leadership', 'leader']",0.5073605
+ I don't have as many gadgets as my techie friend I must not be tech-savvy.,many gadget techie friend must tech savvy,"['gadget techie', 'tech savvy', 'friend tech', 'gadget', 'techie friend']",0.4071898
+ My team didn't choose me to present our project they must not think I'm capable.,team choose present project must think capable,"['team choose', 'project think', 'present project', 'team', 'think capable']",0.65833896
+ I didn't win the science fair my project must not have been innovative.,win science fair project must innovative,"['science fair', 'project innovative', 'win science', 'innovative', 'fair project']",0.49083114
+ My classmates didn't choose me for their study group they must think I'm dumb.,classmate choose study group must think dumb,"['study group', 'classmate choose', 'choose study', 'study', 'think dumb']",0.5906769
+ I wasn't chosen for the company retreat they must not think I'm a team player.,chosen company retreat must think team player,"['company retreat', 'team player', 'retreat think', 'think team', 'retreat']",0.4972281
+ I can't code as well as my software engineer friend I must not be good with computers.,code well software engineer friend must good computer,"['code software', 'software engineer', 'engineer friend', 'software', 'good computer']",0.4218864
+ My group didn't choose my idea for the project they must not think I'm creative.,group choose idea project must think creative,"['choose idea', 'idea project', 'think creative', 'project think', 'group choose']",0.6713078
+ I didn't win the school science fair my research must not be significant.,win school science fair research must significant,"['science fair', 'fair research', 'school science', 'research significant', 'science']",0.45753953
