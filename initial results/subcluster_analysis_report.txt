@@ -1,0 +1,183 @@
+SUBCLUSTER ANALYSIS REPORT
+==================================================
+
+1. NUMBER OF SUBCLUSTERS PER MAIN CLUSTER
+--------------------------------------------------
+ Main_Cluster              Main_Cluster_Label  Number_of_Subclusters
+            1        Peer Unfit People Boring                     20
+noise_cluster         Boring Person Earn Peer                     20
+            2    Leader Project Idea Rejected                     19
+            0 Friend Culinary Wedding Dislike                     18
+
+2. QUESTIONS PER SUBCLUSTER (TOP 20)
+--------------------------------------------------
+     Main_Cluster_Label Subcluster_Label  Question_Count
+Boring Person Earn Peer       i鈥檓 afraid             385
+Boring Person Earn Peer     relationship             213
+Boring Person Earn Peer          anxiety             204
+Boring Person Earn Peer        therapist             202
+Boring Person Earn Peer      friend didn             136
+Boring Person Earn Peer             didn             108
+Boring Person Earn Peer       successful             106
+Boring Person Earn Peer           family             100
+Boring Person Earn Peer            smart              84
+Boring Person Earn Peer          friends              82
+Boring Person Earn Peer             i鈥檝e              70
+Boring Person Earn Peer             feel              69
+Boring Person Earn Peer        boyfriend              68
+Boring Person Earn Peer            can鈥檛              67
+Boring Person Earn Peer       girlfriend              62
+Boring Person Earn Peer          doesn鈥檛              61
+Boring Person Earn Peer              i鈥檓              57
+Boring Person Earn Peer              don              56
+Boring Person Earn Peer       don鈥檛 know              18
+Boring Person Earn Peer            don鈥檛              14
+
+3. CLUSTER STATISTICS SUMMARY
+--------------------------------------------------
+ Main_Cluster              Main_Cluster_Label  Number_of_Subclusters  Total_Questions  Avg_Questions_per_Subcluster  Min_Questions  Max_Questions
+            1        Peer Unfit People Boring                     20             3680                    184.000000             53            504
+noise_cluster         Boring Person Earn Peer                     20             2162                    108.100000             14            385
+            0 Friend Culinary Wedding Dislike                     18              122                      6.777778              1             17
+            2    Leader Project Idea Rejected                     19               93                      4.894737              1             21
+
+4. DETAILED BREAKDOWN BY CLUSTER
+==================================================
+
+CLUSTER: Peer Unfit People Boring
+---------------------------------
+Number of subclusters: 20
+Total questions: 3680
+
+Subclusters (sorted by question count):
+  Subcluster_Label  Question_Count
+        i鈥檓 scared             504
+        don鈥檛 feel             400
+depression anxiety             397
+      relationship             376
+            abused             240
+    social anxiety             214
+           therapy             195
+           parents             189
+         depressed             183
+    hallucinations             114
+           anxiety             114
+        depression             109
+              i鈥檝e             104
+     schizophrenic             102
+           bipolar              97
+     schizophrenia              86
+               ocd              75
+         therapist              64
+               i鈥檓              64
+     panic attacks              53
+
+Top subclusters (>10% of cluster questions):
+  Subcluster_Label  Question_Count
+        i鈥檓 scared             504
+        don鈥檛 feel             400
+depression anxiety             397
+      relationship             376
+
+==================================================
+
+CLUSTER: Boring Person Earn Peer
+--------------------------------
+Number of subclusters: 20
+Total questions: 2162
+
+Subclusters (sorted by question count):
+Subcluster_Label  Question_Count
+      i鈥檓 afraid             385
+    relationship             213
+         anxiety             204
+       therapist             202
+     friend didn             136
+            didn             108
+      successful             106
+          family             100
+           smart              84
+         friends              82
+            i鈥檝e              70
+            feel              69
+       boyfriend              68
+           can鈥檛              67
+      girlfriend              62
+         doesn鈥檛              61
+             i鈥檓              57
+             don              56
+      don鈥檛 know              18
+           don鈥檛              14
+
+Top subclusters (>10% of cluster questions):
+Subcluster_Label  Question_Count
+      i鈥檓 afraid             385
+
+==================================================
+
+CLUSTER: Friend Culinary Wedding Dislike
+----------------------------------------
+Number of subclusters: 18
+Total questions: 122
+
+Subclusters (sorted by question count):
+Subcluster_Label  Question_Count
+ friend artistic              17
+            cook              15
+    wasn invited              12
+         wedding              12
+    friends didn               9
+           paint               9
+ colleagues didn               8
+           lunch               7
+            bake               6
+         meeting               5
+           party               5
+    invite party               5
+        artistic               3
+value friendship               3
+           baker               2
+       good cook               2
+         friends               1
+     didn invite               1
+
+Top subclusters (>10% of cluster questions):
+Subcluster_Label  Question_Count
+ friend artistic              17
+            cook              15
+
+==================================================
+
+CLUSTER: Leader Project Idea Rejected
+-------------------------------------
+Number of subclusters: 19
+Total questions: 93
+
+Subclusters (sorted by question count):
+Subcluster_Label  Question_Count
+    project didn              21
+      think dumb               8
+        proposal               7
+       incapable               7
+        promoted               6
+       promotion               6
+     study group               6
+     wasn chosen               5
+           raise               4
+           ideas               4
+    science fair               4
+          leader               3
+       competent               3
+            idea               2
+    teacher didn               2
+           study               2
+            work               1
+ think incapable               1
+   project think               1
+
+Top subclusters (>10% of cluster questions):
+Subcluster_Label  Question_Count
+    project didn              21
+
+==================================================
+
