@@ -2,7 +2,7 @@
 Anton Kolonin, Ph.D.
 https://lifeboat.com/ex/bios.anton.kolonin
 
-## Blocks and Topics (16 lectures)
+## Blocks and Topics (21 lectures)
 - _General AI, interpretable AI collective AI - state of the art (1)_
   - https://aigents.com/papers/2020/AI-state-2020-en.pdf
   - https://aigents.com/papers/2020/Global-Brain-and-AGI-2020.pdf
@@ -79,30 +79,35 @@ https://lifeboat.com/ex/bios.anton.kolonin
 - Summary, bottom lines, question answering (1) 
 
 ## Course work and diploma thesis topics
-- Decision support systems for technological process automation _(Qian_Yi_Huang)_
+- LLM-enabled engineering
+  - LLM-enabled test-driven software development
+  - VLSI design with LLMs for code and test generation and code verification
+- Artificial General Intelligence (AGI) and Experientiall Learning (EL)
+  - Neuro-symbolic RL for adaptive robotics
+  - Decision support systems (DSS) for automatic process control systems (APCS)
+- Interpretable natural language modeling and unsupervised learning
+  - Conversation-based individual and group behavioral and psychological profiling
+  - Adaptive weak-supervised NLP for content moderation
+  - Deep grammar and ontology learning for ontology extraction from natural language texts in Chinese/English/Russian
+    - https://www.springerprofessional.de/en/programmatic-link-grammar-induction-for-unsupervised-language-le/17020348
+    - https://www.springerprofessional.de/en/unsupervised-language-learning-in-opencog/15995030
+    - https://arxiv.org/abs/2205.11443
+    - https://arxiv.org/abs/2303.02427  
+  - Social media text analysis for psycho-emotinal expressions of sentiment, emotions, intent, manipulation and cognitive distortions in social media for Chinese/Russian/English (or other languages, may be cross-lingual)
+    - https://arxiv.org/abs/2204.12928
+    - https://arxiv.org/abs/2204.10185
+    - https://blog.singularitynet.io/aigents-sentiment-detection-personal-and-social-relevant-news-be989d73b381
+  - Social media text topic modeling and agenda mining correlated with psycho-emotinal expressions for Chinese/Russian/English (or other languages, may be cross-lingual)
+    - https://docs.google.com/spreadsheets/d/1yzaRVYN8I4v0rqrcUpivW-YCLgaU-aNPzTuM5XsXIgw/edit?gid=2138975815#gid=2138975815
+  - Social media relationship graph extraction and annotation with psycho-emotinal expressions (or other languages, may be cross-lingual)
+    - https://docs.google.com/spreadsheets/d/1yzaRVYN8I4v0rqrcUpivW-YCLgaU-aNPzTuM5XsXIgw/edit?gid=2138975815#gid=2138975815
 - Social computing applications in social media and multi-agent systems
-  - Investigating the ability of a group of LLM agents to logically correct a set of related statements _(Litvinenko Dmitriy)_
   - Reputation consensus for distributed ledger systems
     - https://arxiv.org/pdf/1806.07342.pdf
     - https://arxiv.org/abs/2108.03542
   - Reputation systems for marketplace security
     - https://arxiv.org/abs/1905.08036
     - https://arxiv.org/abs/2210.02362  
-- Interpretable natural language modeling and unsupervised learning
-  - Topic 1: Interpretable ontology/grammar learning for Chinese/English/Russian _(Hou Zhenghao - master thesis)_, see:
-    - https://www.springerprofessional.de/en/programmatic-link-grammar-induction-for-unsupervised-language-le/17020348
-    - https://www.springerprofessional.de/en/unsupervised-language-learning-in-opencog/15995030
-    - https://arxiv.org/abs/2205.11443
-    - https://arxiv.org/abs/2303.02427  
-  - Topic 2: Interpretable **sentiment analysis** _(Hou Zhenghao - coursework)_ and detection of cognitive distortions for Chinese language, see:
-    - https://arxiv.org/abs/2204.12928
-    - https://arxiv.org/abs/2204.10185
-    - https://blog.singularitynet.io/aigents-sentiment-detection-personal-and-social-relevant-news-be989d73b381
-- Social media text analysis for sentiment and cognitive distortions
-  - Sentiment analysis and/or cognitive distortions in social media for Chinese (or languages other than Russian/English, may be cross-lingual), _(Anna Redko - coursework)_
-    - https://arxiv.org/abs/2204.12928
-    - https://arxiv.org/abs/2204.10185
-    - https://blog.singularitynet.io/aigents-sentiment-detection-personal-and-social-relevant-news-be989d73b381
 
 ## Course work structure
 - Publication on medium, substack, github blog/site, etc. - covering prior art, R&D done and its results
