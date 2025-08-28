@@ -74,6 +74,59 @@ assert str(dict_compress_with_loss({'a':1000,'b':10,'c':1})) == "{'a': 1000, 'b'
 assert str(dict_compress_with_loss({'x':{'a':1000,'b':10,'c':1},'y':{'m':2000,'n':20,'o':2}})) == "{'x': {'a': 1000, 'b': 10}, 'y': {'m': 2000, 'n': 20}}"
 
 
+def dict_of_dicts_compress_by_threshold(dict_of_dicts, inclusion_threshold, rescale = False):
+    #print('compact_dict_of_dicts_by_threshold',inclusion_threshold)
+    filtered_dict_of_dicts = {}
+    for label, ngram_dict in dict_of_dicts.items():
+        # Find the maximum metric value for the current label
+        max_value = max(ngram_dict.values()) if ngram_dict else 0
+        threshold_value = max_value * (inclusion_threshold / 100)
+        factor = 1.0 / max_value if max_value != 0 else 0
+
+        # Filter n-grams that meet or exceed the threshold value
+        if rescale:
+            filtered_dict_of_dicts[label] = {
+                ngram: metric * factor for ngram, metric in ngram_dict.items() if metric >= threshold_value
+            } 
+        else:
+            filtered_dict_of_dicts[label] = {
+                ngram: metric for ngram, metric in ngram_dict.items() if metric >= threshold_value
+            }
+    return filtered_dict_of_dicts
+assert str(dict_of_dicts_compress_by_threshold({'x':{'a':0.2,'b':0.1},'y':{'c':0.4,'b':0.2}},60)) == "{'x': {'a': 0.2}, 'y': {'c': 0.4}}"
+assert str(dict_of_dicts_compress_by_threshold({'x':{'a':0.2,'b':0.1},'y':{'c':0.4,'b':0.2}},60,rescale=True)) == "{'x': {'a': 1.0}, 'y': {'c': 1.0}}"
+
+
+def dictdict_div_dict(num, den, default = 1, debug = False):
+    res = {}
+    for n in num:
+        if isinstance(num[n], dict):
+            res[n] = dictdict_div_dict(num[n], den)
+        else:
+            if debug:
+                print(n,num[n],den[n],type(num[n]),type(den[n]))
+                #k = float(num[n]) / den[n]
+            if den[n] == 0:
+                res[n] = float(num[n]) / default
+            else:
+                res[n] = float(num[n]) / den[n]
+    return res
+n = {"a":{"x":10,"y":15},"b":{"y":30,"z":40}}; d = {"x":20,"y":30,"z":40}; assert str(dictdict_div_dict(n,d))=="{'a': {'x': 0.5, 'y': 0.5}, 'b': {'y': 1.0, 'z': 1.0}}"
+
+
+def dictdict_mul_dictdict(num, den):
+    res = {}
+    for n in num:
+        if isinstance(num[n], dict):
+            #print(num[n], den[n])
+            res[n] = dictdict_mul_dictdict(num[n], den[n])
+            #print(res[n])
+        else:
+            res[n] = float(num[n]) * den[n]
+    return res
+n = {"a":{"x":10,"y":20},"b":{"x":20,"y":40}}; d = {"a":{"x":10,"y":5},"b":{"x":0.5,"y":0.25}}; assert str(dictdict_mul_dictdict(n,d))=="{'a': {'x': 100.0, 'y': 100.0}, 'b': {'x': 10.0, 'y': 10.0}}"
+
+
 def dict2listsorted(d):
     return [(key, value) for key, value in sorted(d.items())]
 
@@ -140,6 +193,30 @@ def count_subelements(element):
         count = 1
     return count 
 assert count_subelements(['1',2,[[3,'4',{'x':['5',6],'y':(7,'8')},{'z':{'p':9,'q':['10']}}]]]) == 10
+
+def contains_seq(B,A):
+    if type(A) == list:
+        A = tuple(A)
+    if type(B) == list:
+        B = tuple(B)
+    return any(A == B[i:len(A) + i] for i in range(len(B) - len(A) + 1))
+assert contains_seq(('L', 'R', 'L', 'L', 'L', 'R'),('L', 'R'))
+
+
+def sqrt_sum_squares_dict_values(dct):
+    return math.sqrt(sum(x*x for x in dct.values()))
+        
+def cosine_similarity(dict_1, dict_2):
+    intersecting_keys = list(dict_1.keys() & dict_2.keys())
+
+    List1 = list(dict_1[k] for k in intersecting_keys)
+    List2 = list(dict_2[k] for k in intersecting_keys)
+    
+    similarity = np.dot(List1,List2) / (sqrt_sum_squares_dict_values(dict_1) * sqrt_sum_squares_dict_values(dict_2))
+    return round(similarity, 2)
+
+assert cosine_similarity({"a": 1, "b": 2, "c": 3}, {"c": 5, "b": 4, "d": 6}) == 0.7
+assert cosine_similarity({"a": 1.0, "b": 0.5, "c": 0.1}, {"a": 1.0, "b": 0.4, "d": 0.1}) == 0.99
 
 
 # Counting measures 
@@ -354,4 +431,11 @@ assert str(evaluate_compression(["aaaabbbbaaaabbbb"],[["aa"],["aa"],["bb"],["bb"
 assert str(evaluate_compression(["aaaabbbbaaaabbbb"],[["a"],["a"],["a"],["a"],["b"],["b"],["b"],["b"],["a"],["a"],["a"],["a"],["b"],["b"],["b"],["b"]])) == "-0.125"
 
 
+def agg_min_max_avg_mpe(runs):
+    max_v = max(runs)
+    min_v = min(runs)
+    avg_v = sum(runs)/len(runs)
+    # https://en.wikipedia.org/wiki/Mean_absolute_error
+    mpe_v = sum([abs(v-avg_v) for v in runs])/len(runs)/avg_v*100 if avg_v > 0 else 0
+    return min_v, max_v, avg_v, mpe_v
 

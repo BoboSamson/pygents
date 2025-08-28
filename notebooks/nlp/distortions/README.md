@@ -1,0 +1,97 @@
+# Corpora
+- 1 Binary https://huggingface.co/datasets/halilbabacan/autotrain-data-cognitive_distortions
+- 2 Multi-class https://www.kaggle.com/datasets/sagarikashreevastava/cognitive-distortion-detetction-dataset
+- 3 Binary+ (Binary + Multi-class as Binary)
+
+# Models
+- Our
+  - Based on our out-of-the box N-grams
+    - With different inference parameters
+      - Recognition threshold
+      - ...
+  - Based on learned N-grams
+    - With different learning parameters
+      - N (1-4) 
+      - Computation kernel formula
+      - Inclusion threshold
+      - ...
+    - With different inference parameters
+      - Recognition threshold
+      - ...
+- LLM
+  - "llama3.2"
+  - others from the list
+  - https://ollama.com/library
+  - Latest chatGPT?
+- Those found in other papers
+  - ...
+ 
+# Related Papers
+- https://www.computer.org/csdl/proceedings-article/ichi/2017/4881a508/12OmNBOCWjs
+- https://arxiv.org/pdf/1909.07502
+- https://dr.ntu.edu.sg/bitstream/10356/89482/1/Identifying%20Cognitive%20Distortion%20by%20Convolutional%20Neural%20Network%20based%20Text%20Classification.pdf (no numerical results are provided)
+- https://dspace.ut.ee/server/api/core/bitstreams/e62a300f-c6d0-4020-baab-e4e70438a94d/content
+- Automated Detection of Cognitive Distortions in Text Exchanges Between Clinicians and People With Serious Mental Illness
+  - https://pubmed.ncbi.nlm.nih.gov/36164769/
+  - https://psychiatryonline.org/doi/10.1176/appi.ps.202100692
+  - Fine-tuning BERT DNN (non-interpretable, compared to LR and SVM) => F1=0.62, AUC=0.83 
+- https://aclanthology.org/2021.clpsych-1.17.pdf (we use their dataset)
+  - https://aclanthology.org/2021.clpsych-1.17/
+- https://www.frontiersin.org/journals/public-health/articles/10.3389/fpubh.2022.1045777/full
+- https://www.cse.iitb.ac.in/~pb/papers/ecir23-clinical-conversation.pdf
+- https://papers.ssrn.com/sol3/papers.cfm?abstract_id=4582307
+- _TODO_
+ 
+# Plan
+- Binary dataset 3 from two sources 1+2 (**TODO**)
+  - Full dataset evaluation
+    - Const(True) - **DONE**
+    - Random - **DONE**
+    - Aigents (baseline - out-of-the-box) - **DONE**
+      - search for inference hyper-parameters (threshold T=0.4, function=avg)
+    - LLM llama32 - **DONE**
+    - LLM qwen2 - **DONE**
+    - LLM qwen2 - qwen2.5 7B/14B - **DONE**
+    - Aigents (overfitting - same full dataset for test and train) **DONE**
+       - search for learning hyper-parameters
+         - formula: CFCF/.../"new_multinorm"
+         - threshold: 0.1-...-9.9
+         - Nmax: 1-4  
+       - search for inference hyper-parameters
+       - evaluate with best hyper-parameters
+    - Aigents (overfitting + new model) **DONE**
+    - compare all for accuracy, F1 and runtime inference performance **DONE**
+ - Cross-validation (3 * 2/3:1/3, with the best hyper-parameters)
+    - Const(True) - **DONE**
+    - Random - **DONE**
+    - Aigents (baseline - out-of-the-box) - 3 values and average of 3 F1-s across 3 spilts - **DONE**
+    - LLM llama32 - 3 values and average of 3 F1-s across 3 spilts - **DONE**
+    - LLM qwen2-2.5 - 3 values and average of 3 F1-s across 3 spilts - **DONE**
+    - Aigents (3 splits - train on 2/3 and test on 1/3) - 3 values and average of 3 F1-s across 3 spilts - (Anna) to provide numbers - TODO
+    - Aigents (model obtainedd with "overfitting") 3 values and average of 3 F1-s across 3 spilts - TODO (Anton)
+    - Aigents (model obtainedd with "overfitting" AFTER edition of JUNK) 3 values and average of 3 F1-s across 3 spilts - TODO (Anton) ???? 
+    - compare all for accuracy and F1 - TODO
+ - Prepare "reproducibility notebooks" (must be run without of extternal dependencies)
+   - Model Learning Notebook (1 or 4, based on last PR from Anna)
+   - Model Final Inferenes with Comparisons (1, based on distortions_joint_binary + distortions_llm from Anton)  
+ - ------- ?????
+ - Explore use/filtering punctuation?
+ - Explore "weigting" N-grams when classifying
+ - Tidy-up and publish new data set and create and publish new CLEAN model (based on non-split full dataset) - AFTER all experiments run???
+- Multi-class dataset (1)
+  - Full dataset evaluation
+    - Aigents (baseline - out-of-the-box)
+      - search for inference hyper-parameters (threshold T=???, ...)
+    - LLM llama32 _Anton_
+    - LLM qwen2 _Anton_
+    - Aigents (overfitting - same full dataset for test and train)
+       - search for learning hyper-parameters (threshold T=???, ...)
+       - search for inference hyper-parameters (threshold T=???, ...)
+       - evaluate with best hyper-parameters 
+    - compare all for accuracy, average F1 (by class), weighted average F1 (by class, weighted by number of instances) and runtime inference performance
+ - Cross-validation (3 * 2/3:1/3, with the best hyper-parameters)
+    - Aigents (baseline - out-of-the-box) - average of 3 F1-s across 3 spilts
+    - LLM llama32 _Anton_
+    - LLM qwen2 _Anton_
+    - Aigents (3 splits - train on 2/3 and test on 1/3) - average of 3 F1-s across 3 spilts
+    - compare all for accuracy, average F1 (by class), weighted average F1 (by class, weighted by number of instances) and runtime inference performance

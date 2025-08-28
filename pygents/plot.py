@@ -4,15 +4,18 @@ import matplotlib.pyplot as plt
 
 from pygents.text import *
 
-def matrix_plot(row_labels, col_labels, matrix, absmax, title = None, vmin = None, vmax = None):
-    plt.rcParams["figure.figsize"] = (20,len(row_labels)/4)
+def matrix_plot(row_labels, col_labels, matrix, absmax, title = None, vmin = None, vmax = None, dpi = None, titlefontsize = None, width = 20):
+    plt.rcParams["figure.figsize"] = (width,len(row_labels)/4)
+    if not dpi is None:
+        plt.rcParams["figure.dpi"] = dpi
     p = sns.heatmap(matrix, xticklabels=col_labels, yticklabels=row_labels, 
                     vmin = -absmax if vmin is None else vmin, 
                     vmax = absmax if vmax is None else vmax, 
                     cmap='RdYlGn', annot=True)
     if title is not None:
-        fontsize = 32 if len(title) < 50 else round(32 * 50 / len(title))
-        p.set_title(title,fontsize = fontsize)
+        if titlefontsize is None:
+            titlefontsize = 32 if len(title) < 50 else round(32 * 50 / len(title))
+        p.set_title(title,fontsize = titlefontsize)
     plt.show()
 
 def plot_profile(df,text,h=3,title=None):
@@ -42,13 +45,52 @@ def plot_bars(df,labels,values,title=None,fontsize=None):
         fontsize = 32 if len(title) < 50 else round(32 * 50 / len(title))
         plt.title(title,fontsize = fontsize)
 
-def plot_dict(dic,labels,values,title=None,head=None):
+def plot_dict(dic,labels,values,title=None,head=None,fontsize=None):
     df = pd.DataFrame([(key, dic[key]) for key in dic],columns=[labels,values])
     df.sort_values(values,ascending=False,inplace=True)
     if head is not None:
         df = df[:head]
     plt.rcParams["figure.figsize"] = (20,round(len(df)/5))
     p = df[[labels,values]].plot.barh(x=labels); p.invert_yaxis();
+    if title is not None:
+        if not fontsize is None: 
+            plt.title(title,fontsize = fontsize)
+        else:
+            plt.title(title)
+
+def plot_bar_from_list(label,labels,value,values,title=None,head=None,fontsize=None):
+    plt.bar(labels, values)
+    plt.title(f'{value}({label})')
+    plt.xlabel(label)
+    plt.ylabel(value)
+    plt.show()
+
+def plot_bar_from_list_minmax(label,labels,value,values,title=None,fontsize=None,minmax=None,dpi=300):
+    fig, ax = plt.subplots(figsize=(8, 4))
+    plt.bar(labels, values)
+    plt.title(f'{value}({label})' if title is None else title)
+    plt.xlabel(label)
+    plt.ylabel(value)
+    if not minmax is None:
+        for p,mm,v in zip(ax.patches,minmax,values):
+            x = p.get_x()  # get the bottom left x corner of the bar
+            w = p.get_width()  # get width of bar
+            h = p.get_height()  # get height of bar
+            min_y = mm[0]
+            max_y = mm[1]
+            plt.vlines(x+w/2, min_y, max_y, color='k')  # draw a vertical line
+            plt.text(x+w/2,max_y,str(round(v,2)),horizontalalignment='center',verticalalignment='bottom')
+    fig.set_dpi(dpi)
+    plt.show()
+
+def plot_dict_bars(dic,labels,values,title=None,head=None,dim=(8,5)):
+    df = pd.DataFrame([(key, dic[key]) for key in dic],columns=[labels,values])
+    #df.sort_values(values,ascending=False,inplace=True)
+    if head is not None:
+        df = df[:head]
+    if not dim is None:
+        plt.rcParams["figure.figsize"] = dim
+    p = df[[labels,values]].plot.bar(x=labels); #p.invert_yaxis();
     if title is not None:
         plt.title(title)
 
@@ -248,3 +290,28 @@ def dict2tree(dictree,debug=False):
 #print(dict2tree({'c1':'c0','c2':'c0','c3':'c2'}))
 assert(str(dict2tree({'c1':'c0','c2':'c0','c3':'c2'},False)).replace('\n','')) == "└── c0    ├── c1    └── c2        └── c3"
 
+# hyper-parameter space splitter
+def build_triple_list(lst,index1,index2,filt,val_index):
+    triple_list = []
+    for item in lst:
+        skip = False
+        for filt_index in filt:
+            if not item[filt_index] == filt[filt_index]:
+                skip = True
+                break
+        if skip:
+            continue
+        triple_list.append((item[index1],item[index2],item[val_index]))
+    return sorted(triple_list, key=lambda x: (x[0],x[1]))
+    
+def build_triple_matrix(lst,index1,index2,filt,val_index,labels1,labels2):
+    triple_list = build_triple_list(lst,index1,index2,filt,val_index)
+    index = 0
+    matrix = []
+    for l1 in labels1:
+        row = []
+        for l2 in labels2:
+            row.append(triple_list[index][2])
+            index += 1
+        matrix.append(row)
+    return matrix
